@@ -1,0 +1,4 @@
+1) CONTAINS DUPLICATE:
+Think about reducing the loop usage. We sort the vector first and check the vector only witht he next element
+
+2) 
