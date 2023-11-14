@@ -12,3 +12,7 @@ keys as elements and values as index. Iterate over the vector and subtract and c
 4) GROUP ANAGRAMS:
 Create a hash table with keys as string and value as vector of string. For each item, sort it and make it as key and pushback 
 unsorted item. A single key will have multiple objs in value of vector. Later, access the second of the map and append in a vec of vectors.
+
+5) TOP K FREQUENT ELEMENTS:
+Create hash table <int, int> to store element as key and i++ as value. In new vector, using freq as indices, pushback hash table.first elements.
+Looping over, when size = k, stop and return the new resultant vector.
