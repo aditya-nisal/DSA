@@ -16,3 +16,8 @@ unsorted item. A single key will have multiple objs in value of vector. Later, a
 5) TOP K FREQUENT ELEMENTS:
 Create hash table <int, int> to store element as key and i++ as value. In new vector, using freq as indices, pushback hash table.first elements.
 Looping over, when size = k, stop and return the new resultant vector.
+
+5) PRODUCT OF ARRAYS EXCEPT SELF:
+Instead of thinking in terms of an int storing product, consider vector storing running product.
+Left: running_prod_left[i] = running_prod_left[i-1] * nums[i-1]; Right: running_prod_left[i-1] = running_prod_right[i] * nums[i]; 
+result[i] = running_prod_left[i] * running_prod_right[i];
