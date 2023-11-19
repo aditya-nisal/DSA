@@ -1,3 +1,5 @@
+(I) Arrays and Hashing
+
 1) CONTAINS DUPLICATE:
 Think about reducing the loop usage. We sort the vector first and check the vector only witht he next element
 
@@ -17,7 +19,20 @@ unsorted item. A single key will have multiple objs in value of vector. Later, a
 Create hash table <int, int> to store element as key and i++ as value. In new vector, using freq as indices, pushback hash table.first elements.
 Looping over, when size = k, stop and return the new resultant vector.
 
-5) PRODUCT OF ARRAYS EXCEPT SELF:
+6) PRODUCT OF ARRAYS EXCEPT SELF:
 Instead of thinking in terms of an int storing product, consider vector storing running product.
 Left: running_prod_left[i] = running_prod_left[i-1] * nums[i-1]; Right: running_prod_left[i-1] = running_prod_right[i] * nums[i]; 
 result[i] = running_prod_left[i] * running_prod_right[i];
+
+7) ENCODE AND DECODE STRINGS:  
+In vector, add "$" to each string and add each element to an ampty string to get encoded string. For decoded string, loop over each index untill length of the enceoded string>0. In the loop, if element is not "$", add that element to a string variable word. If element is "$", erase string before that, push_back word to result vector and erase word string. 
+
+8)LONGEST CONSECUTIVE SEQUENCE:
+Make a hash map of only keys which are int and no values and store array element as the key. For each key, find num-1. If not found, try to find num+1 and save
+it as current num and find current num+1 and so on. Use a while loop on for loop and keep on finding current seq and max of cur_seq and long_seq is long_seq.
+
+
+(II) Two Pointers
+
+1) VALID PALINDROMES:
+First remove all the non alpha numeric chars and create a separate string. start a for loop looping the new string from start and a var string.size() -1 reducing it. Lower all the cases of string and check if the int val of each char fall between [97, 122], and it is a digit(idigit(i)). If ith element and nth element is not same, return 0. At the end, return 1.
