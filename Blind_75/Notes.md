@@ -39,3 +39,6 @@ First remove all the non alpha numeric chars and create a separate string. start
 
 2) THREE SUM:
 Loop over the vector such that one of the number is fixed. Then, using a 2 pointer approach, start from first and last element and put conditions on them.
+
+3) CONTAINER WITH MOST WATER:
+Start with 2 pointers: one from left and other from right. Loop untill left pointer is less than right. ++ operator on the pointer with less length. Store area in a area variable and keep checking with max_area variable. 3 Condiitons: i<j, j<i, i=j
