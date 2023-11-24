@@ -36,3 +36,6 @@ it as current num and find current num+1 and so on. Use a while loop on for loop
 
 1) VALID PALINDROMES:
 First remove all the non alpha numeric chars and create a separate string. start a for loop looping the new string from start and a var string.size() -1 reducing it. Lower all the cases of string and check if the int val of each char fall between [97, 122], and it is a digit(idigit(i)). If ith element and nth element is not same, return 0. At the end, return 1.
+
+2) THREE SUM:
+Loop over the vector such that one of the number is fixed. Then, using a 2 pointer approach, start from first and last element and put conditions on them.
