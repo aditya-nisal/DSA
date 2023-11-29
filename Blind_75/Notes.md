@@ -42,3 +42,8 @@ Loop over the vector such that one of the number is fixed. Then, using a 2 point
 
 3) CONTAINER WITH MOST WATER:
 Start with 2 pointers: one from left and other from right. Loop untill left pointer is less than right. ++ operator on the pointer with less length. Store area in a area variable and keep checking with max_area variable. 3 Condiitons: i<j, j<i, i=j
+
+(III) Sliding Window
+
+1) BEST TIME TO BUY AND SELL STOCKS:
+Instead of thinking about 2 pointers, think of a single for loop. Check and update the min element in every iteration. Profit_today = each element - min. If the profit<profit_today, we set Profit = Profit_today. 
