@@ -47,3 +47,18 @@ Start with 2 pointers: one from left and other from right. Loop untill left poin
 
 1) BEST TIME TO BUY AND SELL STOCKS:
 Instead of thinking about 2 pointers, think of a single for loop. Check and update the min element in every iteration. Profit_today = each element - min. If the profit<profit_today, we set Profit = Profit_today. 
+
+2) LONGEST SUBSTRING WITHOUT REPEATITION:
+Start with 2 pointers: one initiated as normal int=0 and other in a for loop. Use a unordered set of type char. If a character is not found in set, insert when iterating in for loop. Elee, in a while loop when cuint !=0, keep on incrementing first pointer so as to get a longest string as we try to remove one element from start (using 1st pointer) and check if the next one exists in the set.
+
+3)
+
+(IV) Stack
+
+1) VALID PARANTHESIS:
+Create a stack of char. Loop over string to check for open brackets and add to stack. If closed bracket and stack is empty-> return false. else, get the top element and pop it. Now, check what paranthesis the top element is and get the closing pair to it. If the stack is empty-> rue else false.
+
+(V) BINARY SEARCH:
+
+1) MINIMUM IN ROTATED SORTED ARRAY:
+Iterate the whole array in a while loop while start<end. In this, mid = start+(end-start)/2. If nums[mid]>nums[end]->start will be mid+1. Else, end is mid.
