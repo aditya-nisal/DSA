@@ -62,3 +62,6 @@ Create a stack of char. Loop over string to check for open brackets and add to s
 
 1) MINIMUM IN ROTATED SORTED ARRAY:
 Iterate the whole array in a while loop while start<end. In this, mid = start+(end-start)/2. If nums[mid]>nums[end]->start will be mid+1. Else, end is mid.
+
+2) SEARCH IN ROTATED SORTED ARRAY:
+Set 2 pointers, start=0 and end=nums.size()-1. Iterate while start<=end. Check if else ocnditions for which partition to check.
