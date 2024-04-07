@@ -5,9 +5,13 @@ using namespace std;
 
 class Solution{
 public:
-    // Solution(){
-    //     std::cout<<"Contins Duplicate Example"<<std::endl;
-    // }
+    Solution(){
+        std::cout<<"Array problem start"<<std::endl;
+    }
+    ~Solution()
+    {
+        std::cout<<"Array problem end"<<std::endl;
+    }
     bool ContainsDuplicate(vector<int>& nums){
         std::sort(nums.begin(), nums.end());
         for(int i =0; i<nums.size()-1; i++)
@@ -24,6 +28,6 @@ int main()
 {
     vector<int> tubs = {1, 2, 3, 4, 5, 5, 6};
     Solution s;
-    std::cout<<s.ContainsDuplicate(tubs);
+    std::cout<<s.ContainsDuplicate(tubs)<<std::endl;
 
 }
