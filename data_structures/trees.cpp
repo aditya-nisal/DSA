@@ -1,53 +1,60 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include<queue>
+#include<stack>
 using namespace std;
 
-struct Node
-{
-  int data;
-  Node* left;
-  Node* right;
+class Node
+{ 
+  private:
+    int data;
+    Node* left;
+    Node* right;
 
+  public:
   // New lines
   Node():data(0), left(nullptr), right(nullptr){}
   Node(int x):data(x), left(nullptr), right(nullptr){}
-  Node(int x, Node *left, Node* right):data(0), left(left), right(right){}
+  Node(int x, Node *left, Node* right):data(x), left(left), right(right){}
+  void PrintNodeBFS(Node* node);
+  void PrintNodeDFS(Node* node);
 };
 
-// Node* createNode(int data)
-// {
-//     Node* newNode = new Node();
-//     newNode->data = data;
-//     newNode->left = newNode->right = nullptr;
-//     return newNode;
-// }
+void Node::PrintNodeBFS(Node* node)
+{
+  std::queue<Node*> search;
+  search.push(node);
+  while(!search.empty())
+  {
+    Node* t = search.front();
+    search.pop();
+    std::cout<<t->data<<std::endl;
+    if(t->left != nullptr)
+    {
+      search.push(t->left);
+    }
+    if(t->right != nullptr)
+    {
+      search.push(t->right);
+    }
 
-// int getNodeData(Node* node)
-// {
-//     int data = node->data;
-//     return data;
-// }
+  }
+}
 
-// int main()
+// void Node::PrintNodeDFS(Node* node)
 // {
-//     Node* rootNode = createNode(5);
-//     rootNode->left = createNode(3);
-//     rootNode->right = createNode(4);
-//     rootNode->left->left = createNode(3);
-//     rootNode->left->right = createNode(3);
-//     rootNode->right->left = createNode(4);
-//     rootNode->right->right = createNode(4);
-//     std::cout<<getNodeData(rootNode)<<std::endl;
-//     std::cout<<getNodeData(rootNode->left)<<std::endl;
-//     std::cout<<getNodeData(rootNode->right)<<std::endl;
-//     return 0;
+  
 // }
 
 int main()
 {
-    Node* ChildNode1 = new Node(2);
-    Node* ChildNode2 = new Node(3);
-    Node* rootNode = new Node(5, ChildNode1, ChildNode2);
+    Node* ChildNode4 = new Node(4);
+    Node* ChildNode5 = new Node(5);
+    Node* ChildNode2 = new Node(2, ChildNode4, ChildNode5);
+    Node* ChildNode3 = new Node(3);
+    Node* rootNode = new Node(1, ChildNode2, ChildNode3);
+    rootNode->PrintNodeBFS(rootNode);
+
     return 0;
 }
