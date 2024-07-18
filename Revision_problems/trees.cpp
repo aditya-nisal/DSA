@@ -41,5 +41,6 @@ int main()
     root->AddChildNode(child2);
 
     printTree(root);
+    delete root;
 return 0;
 }
