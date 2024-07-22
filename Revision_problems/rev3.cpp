@@ -45,10 +45,17 @@ int main()
             s_+=s_new[b][q];
         }
     }
-
+    int p=0;
+    std::string f;
     for (auto j: s_map)
     {
         std::cout<<j.first<<": "<<j.second<<std::endl;
+        if(j.second>p)
+        {
+            p = j.second;
+            f = j.first;
+        }
     }
+    std::cout<<f<<": "<<p<<std::endl;
     return 0;
 }
