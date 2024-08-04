@@ -33,7 +33,9 @@ void printResults(EquilateralTriangle et) // Can also pass by reference. Equilat
     cout<<et.circumference<<endl;
     cout<<et.area<<endl;
 }
-
+// 1. Too many friends in programming will break teh whole idea behind encapsulation
+// 2. Friendship is not mutual. One class is friend of second doesn't mean second is friend of first.
+// 3. Friendship is not inherited. Derived class won't be afriend of the base class's friends
 int main()
 {
     EquilateralTriangle eq;
